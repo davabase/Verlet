@@ -82,9 +82,6 @@ namespace Verlet
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
-            
-            if (gameTime.TotalGameTime.Seconds < 20)
-                return;
 
             MouseState mouseState = Mouse.GetState();
             Vector2 pos = new Vector2(mouseState.X, mouseState.Y);
